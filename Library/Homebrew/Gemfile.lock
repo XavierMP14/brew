@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.7.6)
+    activesupport (6.1.7.10)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -17,7 +17,7 @@ GEM
     coderay (1.1.3)
     commander (4.6.0)
       highline (~> 2.0.0)
-    concurrent-ruby (1.2.2)
+    concurrent-ruby (1.3.5)
     diff-lcs (1.5.0)
     docile (1.4.0)
     elftools (1.2.0)
@@ -26,20 +26,21 @@ GEM
     hana (1.3.7)
     highline (2.0.3)
     hpricot (0.8.6)
-    i18n (1.14.1)
+    i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    json (2.7.1)
+    json (2.10.1)
     json_schemer (2.1.1)
       hana (~> 1.3)
       regexp_parser (~> 2.0)
       simpleidn (~> 0.2)
-    language_server-protocol (3.17.0.3)
+    language_server-protocol (3.17.0.4)
+    lint_roller (1.1.0)
     method_source (1.0.0)
-    minitest (5.20.0)
+    minitest (5.25.4)
     msgpack (1.7.2)
     mustache (1.1.1)
     netrc (0.11.0)
-    parallel (1.23.0)
+    parallel (1.26.3)
     parallel_tests (4.3.0)
       parallel
     parlour (8.1.0)
@@ -47,7 +48,7 @@ GEM
       parser
       rainbow (~> 3.0)
       sorbet-runtime (>= 0.5)
-    parser (3.2.2.4)
+    parser (3.3.7.1)
       ast (~> 2.4.1)
       racc
     patchelf (1.4.0)
@@ -59,15 +60,15 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (5.0.4)
-    racc (1.7.3)
-    rack (3.0.8)
+    racc (1.8.1)
+    rack (3.1.10)
     rainbow (3.1.1)
     rbi (0.1.6)
       prism (>= 0.18.0, < 0.20)
       sorbet-runtime (>= 0.5.9204)
     rdiscount (2.2.7.1)
-    regexp_parser (2.8.3)
-    rexml (3.2.6)
+    regexp_parser (2.10.0)
+    rexml (3.4.1)
     ronn (0.7.3)
       hpricot (>= 0.8.2)
       mustache (>= 0.7.0)
@@ -96,35 +97,32 @@ GEM
     rspec-support (3.12.1)
     rspec_junit_formatter (0.6.0)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (1.59.0)
+    rubocop (1.72.2)
       json (~> 2.3)
-      language_server-protocol (>= 3.17.0)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.1.0)
       parallel (~> 1.10)
-      parser (>= 3.2.2.4)
+      parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 1.8, < 3.0)
-      rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.30.0, < 2.0)
+      regexp_parser (>= 2.9.3, < 3.0)
+      rubocop-ast (>= 1.38.0, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.30.0)
-      parser (>= 3.2.1.0)
-    rubocop-capybara (2.19.0)
-      rubocop (~> 1.41)
-    rubocop-factory_bot (2.24.0)
-      rubocop (~> 1.33)
-    rubocop-performance (1.19.1)
-      rubocop (>= 1.7.0, < 2.0)
-      rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.22.2)
+      unicode-display_width (>= 2.4.0, < 4.0)
+    rubocop-ast (1.38.0)
+      parser (>= 3.3.1.0)
+    rubocop-performance (1.24.0)
+      lint_roller (~> 1.1)
+      rubocop (>= 1.72.1, < 2.0)
+      rubocop-ast (>= 1.38.0, < 2.0)
+    rubocop-rails (2.30.1)
       activesupport (>= 4.2.0)
+      lint_roller (~> 1.1)
       rack (>= 1.1)
-      rubocop (>= 1.33.0, < 2.0)
-      rubocop-ast (>= 1.30.0, < 2.0)
-    rubocop-rspec (2.25.0)
-      rubocop (~> 1.40)
-      rubocop-capybara (~> 2.17)
-      rubocop-factory_bot (~> 2.22)
+      rubocop (>= 1.72.1, < 2.0)
+      rubocop-ast (>= 1.38.0, < 2.0)
+    rubocop-rspec (3.5.0)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
     rubocop-sorbet (0.7.6)
       rubocop (>= 0.90.0)
     ruby-macho (4.0.0)
@@ -172,13 +170,15 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.9.1)
-    unicode-display_width (2.5.0)
+    unicode-display_width (3.1.4)
+      unicode-emoji (~> 4.0, >= 4.0.4)
+    unicode-emoji (4.0.4)
     warning (1.3.0)
     yard (0.9.34)
     yard-sorbet (0.8.1)
       sorbet-runtime (>= 0.5)
       yard (>= 0.9)
-    zeitwerk (2.6.12)
+    zeitwerk (2.6.18)
 
 PLATFORMS
   aarch64-linux
@@ -209,9 +209,9 @@ DEPENDENCIES
   rspec_junit_formatter
   rubocop
   rubocop-ast
-  rubocop-performance
-  rubocop-rails
-  rubocop-rspec
+  rubocop-performance (>= 1.24.0)
+  rubocop-rails (>= 2.30.0)
+  rubocop-rspec (>= 3.5.0)
   rubocop-sorbet
   ruby-macho
   ruby-prof
@@ -229,4 +229,4 @@ RUBY VERSION
    ruby 3.1.4p223
 
 BUNDLED WITH
-   2.4.18
+   2.3.26
